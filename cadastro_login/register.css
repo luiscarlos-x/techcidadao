@@ -1,0 +1,74 @@
+ 
+        .register-container {
+            max-width: 420px;
+            margin: 50px auto 0 auto;
+            background: var(--white);
+            border-radius: 14px;
+            box-shadow: var(--box-shadow);
+            padding: 38px 28px 32px 28px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .register-title {
+            font-family: 'Poppins', sans-serif;
+            color: var(--primary-color-dark);
+            font-size: 2em;
+            margin-bottom: 0.5em;
+            text-align: center;
+        }
+        .register-form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+        .register-form input {
+            padding: 13px 16px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 1em;
+            font-family: 'Roboto', sans-serif;
+            background: var(--light-bg);
+            transition: border 0.2s;
+        }
+        .register-form input:focus {
+            border-color: var(--primary-color);
+            outline: none;
+        }
+        .register-form button {
+            margin-top: 10px;
+        }
+        .register-message {
+            color: #d32f2f;
+            background: #ffeaea;
+            border: 1px solid #ffbdbd;
+            border-radius: 6px;
+            padding: 10px 16px;
+            margin-bottom: 18px;
+            width: 100%;
+            text-align: center;
+            font-size: 1em;
+        }
+        .register-link {
+            margin-top: 18px;
+            text-align: center;
+            font-size: 1em;
+        }
+        .register-link a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .register-link a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            .register-container {
+                padding: 22px 7vw 22px 7vw;
+                margin-top: 20px;
+            }
+            .register-title {
+                font-size: 1.4em;
+            }
+        }

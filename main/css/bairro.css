@@ -1,0 +1,161 @@
+/* Neighborhood dropdown styling */
+.neighborhood-selection {
+    margin: 20px 0;
+}
+
+.neighborhood-dropdown {
+    position: relative;
+    width: 200px;
+    margin: 0 0 0 20px; /* Changed from 0 auto to position on the left with some margin */
+}
+
+.selected-neighborhood {
+    padding: 10px 15px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.selected-neighborhood:hover {
+    background-color: var(--primary-color-dark);
+}
+
+.selected-neighborhood::after {
+    content: '▼';
+    margin-left: 10px;
+    font-size: 0.8em;
+}
+
+.neighborhood-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    display: none;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+.neighborhood-options.show {
+    display: block;
+    animation: fadeIn 0.2s;
+}
+
+.neighborhood-option {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-align: center;
+}
+
+.neighborhood-option:hover {
+    background-color: #f0f0f0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Category content styling */
+.category-content {
+    display: block;
+    margin-top: 20px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.category-content h4 {
+    color: #0056b3;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.category-info-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.category-image {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.category-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.category-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.category-description {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.category-criteria h5 {
+    color: #0056b3;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.category-criteria ul {
+    padding-left: 20px;
+}
+
+.category-criteria li {
+    margin-bottom: 8px;
+    color: #555;
+}
+
+/* Gauge chart styling */
+.gauge-container {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gauge-chart {
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .category-info-container {
+        flex-wrap: nowrap;
+    }
+    
+    .category-image {
+        max-width: 250px;
+    }
+}

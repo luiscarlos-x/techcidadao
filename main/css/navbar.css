@@ -1,0 +1,30 @@
+/* Estilo para a saudação de usuário na barra de navegação */
+.user-greeting {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-left: 15px;
+    font-style: italic;
+    font-weight: 300;
+    display: none; /* Inicialmente oculto em telas pequenas */
+}
+
+/* Exibe em telas maiores */
+@media (min-width: 768px) {
+    .user-greeting {
+        display: block;
+    }
+}
+
+/* Estilo para menu com usuário logado */
+.main-nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Ajuste espaçamento em telas pequenas */
+@media (max-width: 767px) {
+    .main-nav-title {
+        flex: 1;
+    }
+}

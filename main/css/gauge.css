@@ -1,0 +1,98 @@
+.gauge-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0;
+    padding: 25px 15px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.gauge-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+    position: relative;
+}
+
+.gauge-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(to right, #3273dc, #ff3860);
+    margin: 8px auto 0;
+    border-radius: 2px;
+}
+
+.gauge-chart {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+/* Estilização específica para ApexCharts */
+.apexcharts-radialbar-hollow {
+    fill: #f8f9fa !important;
+}
+
+.apexcharts-datalabel-label {
+    font-weight: 500 !important;
+    font-size: 14px !important;
+}
+
+.apexcharts-datalabel-value {
+    font-weight: 700 !important;
+    fill: #333 !important;
+}
+
+/* Legend styles */
+.gauge-legend {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 15px auto 5px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin: 5px 10px;
+}
+
+.legend-color {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.legend-label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .gauge-container {
+        width: 100%;
+        padding: 20px 10px;
+    }
+    
+    .gauge-legend {
+        width: 100%;
+        padding: 10px 5px;
+    }
+    
+    .legend-item {
+        margin: 4px 6px;
+    }
+}

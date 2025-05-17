@@ -1,0 +1,362 @@
+/* Estilos para a página de avaliação */
+.avaliacao-header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.avaliacao-header h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.avaliacao-header p {
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.avaliacao-message {
+    padding: 12px 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.avaliacao-message.success {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border-left: 4px solid #2e7d32;
+}
+
+.avaliacao-message.error {
+    background-color: #ffebee;
+    color: #c62828;
+    border-left: 4px solid #c62828;
+}
+
+.avaliacao-form-section {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.avaliacao-form .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.avaliacao-form .form-group {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.avaliacao-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+}
+
+.avaliacao-form select,
+.avaliacao-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    font-family: inherit;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.avaliacao-form select:focus,
+.avaliacao-form textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.1);
+    outline: none;
+}
+
+.categoria-descricao {
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 25px;
+    font-style: italic;
+    color: #555;
+}
+
+/* Estilos para o slider de avaliação */
+.avaliacao-slider-container {
+    margin-bottom: 30px;
+}
+
+.slider-container {
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 5px;
+}
+
+.slider-labels {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.avaliacao-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 20px;
+    background: transparent;
+    outline: none;
+    z-index: 2;
+    position: relative;
+}
+
+.slider-track {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background-color: #eee;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.slider-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #3273dc;
+    border-radius: 5px;
+    width: 50%; /* Valor inicial */
+}
+
+.avaliacao-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #3273dc;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.avaliacao-slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #3273dc;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.form-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.button.primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.button.primary:hover {
+    background-color: var(--primary-color-dark);
+}
+
+.button.secondary {
+    background-color: #f5f5f5;
+    color: #555;
+}
+
+.button.secondary:hover {
+    background-color: #e0e0e0;
+}
+
+/* Estilos para a lista de avaliações */
+.minhas-avaliacoes {
+    margin-top: 40px;
+}
+
+.minhas-avaliacoes h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.no-avaliacoes {
+    text-align: center;
+    color: #777;
+    font-style: italic;
+    padding: 20px;
+}
+
+.avaliacao-bairro {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+    padding: 20px;
+}
+
+.avaliacao-bairro h4 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.avaliacao-categorias {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+}
+
+.avaliacao-item {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 15px;
+    position: relative;
+}
+
+.avaliacao-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.categoria-nome {
+    font-weight: 500;
+    color: #333;
+}
+
+.avaliacao-pontuacao {
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: white;
+}
+
+.avaliacao-pontuacao.insatisfatorio {
+    background-color: #ff3860;
+}
+
+.avaliacao-pontuacao.regular {
+    background-color: #ffdd57;
+    color: #333;
+}
+
+.avaliacao-pontuacao.bom {
+    background-color: #48c774;
+}
+
+.avaliacao-pontuacao.excelente {
+    background-color: #3273dc;
+}
+
+.avaliacao-progresso {
+    height: 8px;
+    background-color: #eee;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+
+.progresso-barra {
+    height: 100%;
+    border-radius: 4px;
+}
+
+.progresso-barra.insatisfatorio {
+    background-color: #ff3860;
+}
+
+.progresso-barra.regular {
+    background-color: #ffdd57;
+}
+
+.progresso-barra.bom {
+    background-color: #48c774;
+}
+
+.progresso-barra.excelente {
+    background-color: #3273dc;
+}
+
+.avaliacao-comentario {
+    font-size: 0.9rem;
+    color: #555;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.editar-avaliacao {
+    background-color: transparent;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.editar-avaliacao:hover {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .avaliacao-form .form-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .avaliacao-form .form-group {
+        width: 100%;
+    }
+    
+    .avaliacao-categorias {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-buttons {
+        flex-direction: column;
+    }
+}
